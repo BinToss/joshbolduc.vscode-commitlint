@@ -1,6 +1,8 @@
 .github/**
 .vscode/**
 coverage/**
+images/**
+node_modules/**
 src/**
 test/**
 .gitignore
