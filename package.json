@@ -9,6 +9,9 @@
   "bugs": "https://github.com/joshbolduc/vscode-commitlint/issues",
   "homepage": "https://github.com/joshbolduc/vscode-commitlint",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "npm": "^9.0.0",
     "vscode": "^1.65.0"
