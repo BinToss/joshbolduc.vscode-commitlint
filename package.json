@@ -98,7 +98,7 @@
     "lint:fix": "npm run -s lint -- --fix",
     "release": "standard-version",
     "test": "vitest run",
-    "test:prep": "TS_NODE_PROJECT=tsconfig.scripts.json node -r ts-eager/register ./scripts/testPrep.ts",
+    "test:prep": "cross-env TS_NODE_PROJECT=tsconfig.scripts.json tsx ./scripts/testPrep.mts",
     "typecheck": "tsc --build",
     "typecheck:watch": "npm run -s typecheck -- --watch"
   },
