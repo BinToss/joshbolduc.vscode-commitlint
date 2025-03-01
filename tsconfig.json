@@ -11,7 +11,9 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "importsNotUsedAsValues": "error",
-    "noUncheckedIndexedAccess": true
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
+    "composite": true
   },
   "exclude": ["node_modules"]
 }
