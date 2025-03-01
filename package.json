@@ -5,13 +5,8 @@
   "publisher": "joshbolduc",
   "version": "2.6.2",
   "icon": "icon.png",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/joshbolduc/vscode-commitlint.git"
-  },
-  "bugs": {
-    "url": "https://github.com/joshbolduc/vscode-commitlint/issues"
-  },
+  "repository": "github:joshbolduc/vscode-commitlint",
+  "bugs": "https://github.com/joshbolduc/vscode-commitlint/issues",
   "homepage": "https://github.com/joshbolduc/vscode-commitlint",
   "license": "MIT",
   "engines": {
