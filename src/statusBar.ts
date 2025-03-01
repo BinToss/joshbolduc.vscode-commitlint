@@ -1,4 +1,4 @@
-import { languages, LanguageStatusItem, LanguageStatusSeverity } from 'vscode';
+import { languages, type LanguageStatusItem, LanguageStatusSeverity } from 'vscode';
 import { GIT_COMMIT_LANGUAGE_ID } from './utils';
 
 const STATUS_ITEM_ID = 'commitlint-config-status';
