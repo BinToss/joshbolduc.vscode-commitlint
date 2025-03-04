@@ -1,21 +1,5 @@
 {
-  "compilerOptions": {
-    "module": "ES2022",
-    "moduleResolution": "node",
-    "target": "esnext",
-    "outDir": "out",
-    "lib": [
-      "ES2019"
-    ],
-    "sourceMap": true,
-    "rootDir": ".",
-    "strict": true,
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "noUncheckedIndexedAccess": true,
-    "composite": true,
-  },
+  "extends": "./tsconfig.base.json",
   "exclude": [
     "node_modules",
     "out",

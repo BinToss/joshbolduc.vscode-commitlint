@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "//": "config extended by all tsconfigs in this repo",
+  "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "outDir": "out",
+    "lib": [
+      "ES2019"
+    ],
+    "sourceMap": true,
+    "rootDir": ".",
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
+    "composite": true,
+  },
+}
