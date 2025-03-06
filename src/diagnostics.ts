@@ -50,6 +50,7 @@ function createDiagnostic(
   const diagnostic = new Diagnostic(
     new Range(doc.positionAt(startIndex), doc.positionAt(endIndex)),
     result.message,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
     result.level === 2 ? DiagnosticSeverity.Error : DiagnosticSeverity.Warning,
   );
 
