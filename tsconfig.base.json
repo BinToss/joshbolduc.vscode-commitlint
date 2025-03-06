@@ -1,15 +1,15 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "//": "config extended by all tsconfigs in this repo",
+  "$schema": "https://json.schemastore.org/tsconfig#",
+  "//": {
+    "description": "config extended by all tsconfigs in this repo",
+    "compilerOptions.target": "Limited by file:///./.nvmrc. Node.js 18.16.1 (through 24.0.0) are 97% compatible with ES2022. They don't support 'shows up in flags' of 'tc39/proposal-regexp-match-indices'. Node.js 18.16.1 has merely 30% of ES2023 implemented.",
+  },
   "compilerOptions": {
-    "module": "ES2022",
-    "moduleResolution": "node",
-    "target": "esnext",
+    "module": "NodeNext",
+    "target": "ES2022",
     "outDir": "out",
-    "lib": [
-      "ES2019"
-    ],
     "sourceMap": true,
+    "declarationMap": true,
     "rootDir": ".",
     "strict": true,
     "skipLibCheck": true,
@@ -18,4 +18,11 @@
     "noUncheckedIndexedAccess": true,
     "composite": true,
   },
+  "exclude": [
+    "node_modules",
+    "out",
+    "dist",
+    "**/tsconfig.json",
+    "**/tsconfig.*.json"
+  ]
 }

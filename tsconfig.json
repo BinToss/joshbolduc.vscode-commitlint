@@ -5,10 +5,23 @@
     "allowJs": true,
     "checkJs": true
   },
-  "exclude": [
-    "node_modules",
-    "out",
-    "dist",
-    "**/tsconfig.*.json"
+  "include": [
+    "*.cjs",
+    "*.cts",
+    "*.js",
+    "*.mjs",
+    "*.mts",
+    "*.ts"
+  ],
+  "references": [
+    {
+      "path": "./src/tsconfig.json"
+    },
+    {
+      "path": "./scripts/tsconfig.json"
+    },
+    {
+      "path": "./test/tsconfig.json"
+    }
   ]
 }

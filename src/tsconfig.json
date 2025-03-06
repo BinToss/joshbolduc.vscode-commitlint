@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.base.json",
+  "//compilerOptions.moduleResolution": "Set to bundler; we use esbuild's bundler. See https://esbuild.github.io/api/#bundle.",
+  "//compilerOptions.target": "vscode 1.65 is mostly ES2017-compatible. See file://./../package.json#engines.vscode, https://gist.github.com/BinToss/4294395b7659bd4a6081c647c096a394#vscode-versions-and-their-internal-deps.",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ES2017",
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "__mocks__",
+    "**/*.test.ts"
+  ]
+}
