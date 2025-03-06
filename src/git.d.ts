@@ -131,7 +131,13 @@ export interface LogOptions {
   readonly path?: string;
 }
 
-export type PostCommitCommand = 'push' | 'sync' | string;
+export type PostCommitCommand<T> = T extends 'push'
+  ? T & 'push'
+  : T extends 'sync'
+  ? T & 'sync'
+  : T extends string
+  ? T & string
+  : never;
 
 export interface CommitOptions {
   all?: boolean | 'tracked';
