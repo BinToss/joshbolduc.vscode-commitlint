@@ -1,6 +1,6 @@
 import { default as js } from '@eslint/js';
 import prettier from 'eslint-config-prettier';
-import { default as eslintPluginImportX } from 'eslint-plugin-import-x'
+import { default as importX } from 'eslint-plugin-import-x'
 import globals from 'globals'
 import tseslint from 'typescript-eslint';
 
@@ -10,8 +10,8 @@ export default tseslint.config(
   js.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   prettier,
-  eslintPluginImportX.flatConfigs.recommended,
-  eslintPluginImportX.flatConfigs.typescript,
+  importX.flatConfigs.recommended,
+  importX.flatConfigs.typescript,
   {
     name: 'vscode-commitlint_eslintConfig',
     languageOptions: {
@@ -25,10 +25,10 @@ export default tseslint.config(
     linterOptions: {
       reportUnusedDisableDirectives: true
     },
-    ignores: ["src/git.d.ts", "node_modules/**/*"],
+    ignores: ["src/git.d.ts", "node_modules/**/*", "dist/**/*", "out/**/*"],
     rules: {
       curly: ["error", "all"],
-      "import/order": ["warn", { "alphabetize": { "order": "asc" } }],
+      "import-x/order": ["warn", { "alphabetize": { "order": "asc" } }],
       "object-shorthand": [
         "warn",
         "always",
@@ -44,13 +44,14 @@ export default tseslint.config(
     }
   },
   {
-    // See https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
+    // See https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import,
+    //     https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/flat/typescript.ts
     name: 'eslint-plugin-import_tseslint_overrides',
     rules: {
-      'import/namespace': ['off'],
-      'import/default': ['off'],
-      'import/no-named-as-default-member': ['off'],
-      'import/no-unresolved': ['off']
+      'import-x/namespace': 'off',
+      'import-x/default': 'off',
+      'import-x/no-named-as-default-member': 'off',
+      'import-x/no-unresolved': 'off'
     }
   }
 )
