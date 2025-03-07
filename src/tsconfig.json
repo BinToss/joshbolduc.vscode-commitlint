@@ -5,13 +5,8 @@
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "target": "ES2017",
+    "target": "ES2017"
   },
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": [
-    "__mocks__",
-    "**/*.test.ts"
-  ]
+  "include": ["**/*.ts"],
+  "exclude": ["__mocks__", "**/*.test.ts"]
 }

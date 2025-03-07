@@ -134,10 +134,10 @@ export interface LogOptions {
 export type PostCommitCommand<T> = T extends 'push'
   ? T & 'push'
   : T extends 'sync'
-  ? T & 'sync'
-  : T extends string
-  ? T & string
-  : never;
+    ? T & 'sync'
+    : T extends string
+      ? T & string
+      : never;
 
 export interface CommitOptions {
   all?: boolean | 'tracked';
